@@ -58,8 +58,11 @@ int main(){
     bool stop;
     RedirPipe check;
     while(true){
-        
-        cout << "shell>";
+        char cwd[1024];
+	char usr[1024];
+	getlogin_r(usr, sizeof(usr));
+	getcwd(cwd, sizeof(cwd)); 
+        cout << usr << " " << cwd << ">";
        
         getline(cin, input); 
         
