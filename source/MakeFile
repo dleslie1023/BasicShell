@@ -1,0 +1,5 @@
+all:
+	g++ main.cpp sh_functions.cpp header.h -o shell
+
+clean:
+	rm -rf *o shell
